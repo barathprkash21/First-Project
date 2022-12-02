@@ -1,60 +1,34 @@
-
+import logo192 from './logo192.png'
+import imag from './images/download.jpg'
 function App() {
 
   return (
-<div>
-
-<h3> INSTAgram</h3>
-
-<nav className="navbar navbar-expand-lg bg-light">
+<div className='container-fluid'>
+<nav className="navbar navbar-expand-lg bg-primary">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <a className="navbar-brand" href="/"><img src={logo192} alt="logo" style={{ width: '70px', height: '70px' }}/>
+    </a>
+    <h3 className='navbar-brand'>Gallery App  </h3>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
   </div>
 </nav>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-6 pa-10 col-sm-3">
+    <a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/></a>
+      </div>
+    <div class="col-6 col-sm-3"><a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/>
+    </a></div>
+    <div class="col-6 col-sm-3"><a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/>
+    </a></div>
+    <div class="col-6 col-sm-3"><a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/>
+    </a></div>
+  </div>
+</div>
 
-<div className="card text-bg-primary mb-3" >
-  <div className="card-header">Header</div>
-  <div className="card-body">
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div className="card text-bg-info mb-3"   >
-  <div className="card-header">Header</div>
-  <div className="card-body">
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
+
 </div>
 
 
