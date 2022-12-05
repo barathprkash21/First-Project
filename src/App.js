@@ -1,7 +1,12 @@
 import logo192 from './logo192.png'
-import imag from './images/download.jpg'
+import imag from './images/download.jpeg'
+import { useState } from 'react'
 function App() {
+  const [images, setImage] = useState()
 
+  fetch('https://picsum.photos/v2/list')
+  .then(res => res.json())
+  .then(d=> setImage(d))
   return (
 <div className='container-fluid'>
 <nav className="navbar navbar-expand-lg bg-primary">
@@ -16,15 +21,14 @@ function App() {
 </nav>
 <div class="container text-center">
   <div class="row">
-    <div class="col-6 pa-10 col-sm-3">
-    <a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/></a>
+    {images.map(picsum =>{
+      return(
+      <div class="col-6 pa-10 col-sm-3">
+        <a className="navbar-brand" href="/"><img src={picsum.download_url} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/></a>
       </div>
-    <div class="col-6 col-sm-3"><a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/>
-    </a></div>
-    <div class="col-6 col-sm-3"><a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/>
-    </a></div>
-    <div class="col-6 col-sm-3"><a className="navbar-brand" href="/"><img src={imag} alt="logo" style={{ width: '250px', height: '250px', padding: '20px' }}/>
-    </a></div>
+      )
+    })
+    }
   </div>
 </div>
 
